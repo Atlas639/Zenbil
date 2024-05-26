@@ -6,12 +6,29 @@
 //
 
 import SwiftUI
+import FirebaseCore
+
+class AppDelegate: NSObject, UIApplicationDelegate {
+    func application(_ application: UIApplication,
+                     didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]? = nil) -> Bool {
+        FirebaseApp.configure()
+        return true
+    }
+}
 
 @main
-struct ZenbilApp: App {
+struct YourApp: App {
+    // Register app delegate for Firebase setup
+    @UIApplicationDelegateAdaptor(AppDelegate.self) var delegate
+    // Create an instance of ScannerViewModel
+    @State private var scannerViewModel = ScannerViewModel()
+
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            NavigationView {
+                ContentView()
+                    .environment(scannerViewModel) // Provide ScannerViewModel to the environment
+            }
         }
     }
 }
