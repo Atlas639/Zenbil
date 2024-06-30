@@ -2,10 +2,11 @@
 //  ContentView.swift
 //  Zenbil
 //
-//  Created by Berhan Witte on 09.05.24.
+//  Created by Berhan Witte on 28.05.24.
 //
 
 import SwiftUI
+import VisionKit
 
 extension View {
     func withoutAnimation(action: @escaping () -> Void) {
@@ -18,12 +19,9 @@ extension View {
 }
 
 struct ContentView: View {
-    @State private var showOptions: Bool = false // State to toggle the visibility of options
-    @State private var articleName: String = ""
+    @State private var showOptions: Bool = false
     @State private var showScanner: Bool = false
-    @State private var isScannerViewVisible: Bool = false
-    @State private var scannedCode: String?
-    @Environment(ScannerViewModel.self) var viewModel: ScannerViewModel
+    
 
     // Dummy data for articles
     let articles = [
@@ -91,14 +89,7 @@ struct ContentView: View {
             }
             .padding(20)
             .fullScreenCover(isPresented: $showScanner) {
-                ScannerView { result in
-                    scannedCode = result // Handle the scanned code as needed
-                    withoutAnimation {
-                        showScanner = false
-                        showOptions = false
-                    }
-                }
-                .environment(viewModel) // Ensure ScannerView has access to the environment object
+                DataScannerUIView()
                 .edgesIgnoringSafeArea(.all)
             }
         }
@@ -130,7 +121,6 @@ struct OptionButton: View {
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
-            .environment(ScannerViewModel()) // Provide ScannerViewModel to the environment for previews
     }
 }
 

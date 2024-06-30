@@ -18,16 +18,17 @@ class AppDelegate: NSObject, UIApplicationDelegate {
 
 @main
 struct YourApp: App {
-    // Register app delegate for Firebase setup
     @UIApplicationDelegateAdaptor(AppDelegate.self) var delegate
-    // Create an instance of ScannerViewModel
-    @State private var scannerViewModel = ScannerViewModel()
+    @State private var vm = AppViewModel()
 
     var body: some Scene {
         WindowGroup {
             NavigationView {
                 ContentView()
-                    .environment(scannerViewModel) // Provide ScannerViewModel to the environment
+                    .environment(vm)
+                    .task {
+                        await vm.requestDataScannerAccessStatus()
+                    }
             }
         }
     }

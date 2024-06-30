@@ -7,13 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F815F75C2C2E2F3D005BB2E0 /* DataScannerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F815F75B2C2E2F3D005BB2E0 /* DataScannerViewModel.swift */; };
+		F815F7602C2E31F4005BB2E0 /* DataScannerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F815F75F2C2E31F4005BB2E0 /* DataScannerModel.swift */; };
+		F815F7622C2F4B9D005BB2E0 /* DataScannerUIVIew.swift in Sources */ = {isa = PBXBuildFile; fileRef = F815F7612C2F4B9D005BB2E0 /* DataScannerUIVIew.swift */; };
 		F8654A322BED2F1D0024B2BB /* ZenbilApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8654A312BED2F1D0024B2BB /* ZenbilApp.swift */; };
-		F8654A342BED2F1D0024B2BB /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8654A332BED2F1D0024B2BB /* ContentView.swift */; };
 		F8654A362BED2F1E0024B2BB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F8654A352BED2F1E0024B2BB /* Assets.xcassets */; };
 		F8654A392BED2F1E0024B2BB /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F8654A382BED2F1E0024B2BB /* Preview Assets.xcassets */; };
 		F8654A432BED2F1E0024B2BB /* ZenbilTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8654A422BED2F1E0024B2BB /* ZenbilTests.swift */; };
 		F8654A4D2BED2F1E0024B2BB /* ZenbilUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8654A4C2BED2F1E0024B2BB /* ZenbilUITests.swift */; };
 		F8654A4F2BED2F1E0024B2BB /* ZenbilUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8654A4E2BED2F1E0024B2BB /* ZenbilUITestsLaunchTests.swift */; };
+		F886D4322C0EA0380006138E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F886D4312C0EA0380006138E /* GoogleService-Info.plist */; };
 		F8A1D6072C03941E00141C1D /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = F8A1D6062C03941E00141C1D /* FirebaseAnalytics */; };
 		F8A1D6092C03941E00141C1D /* FirebaseAnalyticsOnDeviceConversion in Frameworks */ = {isa = PBXBuildFile; productRef = F8A1D6082C03941E00141C1D /* FirebaseAnalyticsOnDeviceConversion */; };
 		F8A1D60B2C03941E00141C1D /* FirebaseAnalyticsSwift in Frameworks */ = {isa = PBXBuildFile; productRef = F8A1D60A2C03941E00141C1D /* FirebaseAnalyticsSwift */; };
@@ -42,10 +45,9 @@
 		F8A1D6392C03941E00141C1D /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = F8A1D6382C03941E00141C1D /* FirebaseStorage */; };
 		F8A1D63B2C03941E00141C1D /* FirebaseStorageCombine-Community in Frameworks */ = {isa = PBXBuildFile; productRef = F8A1D63A2C03941E00141C1D /* FirebaseStorageCombine-Community */; };
 		F8A1D63D2C03941E00141C1D /* FirebaseVertexAI-Preview in Frameworks */ = {isa = PBXBuildFile; productRef = F8A1D63C2C03941E00141C1D /* FirebaseVertexAI-Preview */; };
-		F8A1D6412C03951900141C1D /* ScannerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8A1D6402C03951900141C1D /* ScannerVC.swift */; };
-		F8A1D6432C03954900141C1D /* ScannerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8A1D6422C03954900141C1D /* ScannerView.swift */; };
-		F8A1D6452C03957300141C1D /* ScannerVIewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8A1D6442C03957300141C1D /* ScannerVIewModel.swift */; };
-		F8A1D6472C0397BB00141C1D /* ThumbnailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8A1D6462C0397BB00141C1D /* ThumbnailView.swift */; };
+		F8A1D6492C03EE3700141C1D /* AppViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8A1D6482C03EE3700141C1D /* AppViewModel.swift */; };
+		F8A1D64D2C0675A200141C1D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8A1D64C2C0675A200141C1D /* ContentView.swift */; };
+		F8A1D64F2C06774400141C1D /* DataScannerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8A1D64E2C06774400141C1D /* DataScannerView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,9 +68,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		F815F75B2C2E2F3D005BB2E0 /* DataScannerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataScannerViewModel.swift; sourceTree = "<group>"; };
+		F815F75F2C2E31F4005BB2E0 /* DataScannerModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataScannerModel.swift; sourceTree = "<group>"; };
+		F815F7612C2F4B9D005BB2E0 /* DataScannerUIVIew.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataScannerUIVIew.swift; sourceTree = "<group>"; };
 		F8654A2E2BED2F1D0024B2BB /* Zenbil.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Zenbil.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F8654A312BED2F1D0024B2BB /* ZenbilApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZenbilApp.swift; sourceTree = "<group>"; };
-		F8654A332BED2F1D0024B2BB /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		F8654A352BED2F1E0024B2BB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F8654A382BED2F1E0024B2BB /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		F8654A3E2BED2F1E0024B2BB /* ZenbilTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ZenbilTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -76,11 +80,11 @@
 		F8654A482BED2F1E0024B2BB /* ZenbilUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ZenbilUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F8654A4C2BED2F1E0024B2BB /* ZenbilUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZenbilUITests.swift; sourceTree = "<group>"; };
 		F8654A4E2BED2F1E0024B2BB /* ZenbilUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZenbilUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		F886D4312C0EA0380006138E /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		F8A1D6032C0393EC00141C1D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
-		F8A1D6402C03951900141C1D /* ScannerVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScannerVC.swift; sourceTree = "<group>"; };
-		F8A1D6422C03954900141C1D /* ScannerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScannerView.swift; sourceTree = "<group>"; };
-		F8A1D6442C03957300141C1D /* ScannerVIewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScannerVIewModel.swift; sourceTree = "<group>"; };
-		F8A1D6462C0397BB00141C1D /* ThumbnailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThumbnailView.swift; sourceTree = "<group>"; };
+		F8A1D6482C03EE3700141C1D /* AppViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppViewModel.swift; sourceTree = "<group>"; };
+		F8A1D64C2C0675A200141C1D /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		F8A1D64E2C06774400141C1D /* DataScannerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataScannerView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -161,14 +165,16 @@
 			isa = PBXGroup;
 			children = (
 				F8A1D6032C0393EC00141C1D /* Info.plist */,
+				F886D4312C0EA0380006138E /* GoogleService-Info.plist */,
 				F8654A312BED2F1D0024B2BB /* ZenbilApp.swift */,
-				F8654A332BED2F1D0024B2BB /* ContentView.swift */,
+				F8A1D64C2C0675A200141C1D /* ContentView.swift */,
+				F8A1D6482C03EE3700141C1D /* AppViewModel.swift */,
 				F8654A352BED2F1E0024B2BB /* Assets.xcassets */,
 				F8654A372BED2F1E0024B2BB /* Preview Content */,
-				F8A1D6402C03951900141C1D /* ScannerVC.swift */,
-				F8A1D6422C03954900141C1D /* ScannerView.swift */,
-				F8A1D6442C03957300141C1D /* ScannerVIewModel.swift */,
-				F8A1D6462C0397BB00141C1D /* ThumbnailView.swift */,
+				F8A1D64E2C06774400141C1D /* DataScannerView.swift */,
+				F815F75B2C2E2F3D005BB2E0 /* DataScannerViewModel.swift */,
+				F815F75F2C2E31F4005BB2E0 /* DataScannerModel.swift */,
+				F815F7612C2F4B9D005BB2E0 /* DataScannerUIVIew.swift */,
 			);
 			path = Zenbil;
 			sourceTree = "<group>";
@@ -299,7 +305,7 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1530;
-				LastUpgradeCheck = 1530;
+				LastUpgradeCheck = 1600;
 				TargetAttributes = {
 					F8654A2D2BED2F1D0024B2BB = {
 						CreatedOnToolsVersion = 15.3;
@@ -342,6 +348,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F886D4322C0EA0380006138E /* GoogleService-Info.plist in Resources */,
 				F8654A392BED2F1E0024B2BB /* Preview Assets.xcassets in Resources */,
 				F8654A362BED2F1E0024B2BB /* Assets.xcassets in Resources */,
 			);
@@ -368,12 +375,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F8A1D6452C03957300141C1D /* ScannerVIewModel.swift in Sources */,
-				F8A1D6412C03951900141C1D /* ScannerVC.swift in Sources */,
-				F8A1D6432C03954900141C1D /* ScannerView.swift in Sources */,
-				F8A1D6472C0397BB00141C1D /* ThumbnailView.swift in Sources */,
-				F8654A342BED2F1D0024B2BB /* ContentView.swift in Sources */,
+				F8A1D6492C03EE3700141C1D /* AppViewModel.swift in Sources */,
 				F8654A322BED2F1D0024B2BB /* ZenbilApp.swift in Sources */,
+				F815F7622C2F4B9D005BB2E0 /* DataScannerUIVIew.swift in Sources */,
+				F8A1D64D2C0675A200141C1D /* ContentView.swift in Sources */,
+				F8A1D64F2C06774400141C1D /* DataScannerView.swift in Sources */,
+				F815F7602C2E31F4005BB2E0 /* DataScannerModel.swift in Sources */,
+				F815F75C2C2E2F3D005BB2E0 /* DataScannerViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -541,6 +549,7 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Zenbil/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "Allow Scanner to access Camera";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -551,7 +560,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = Zenbil.Zenbil;
+				PRODUCT_BUNDLE_IDENTIFIER = Zenbil.Supply;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -571,6 +580,7 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Zenbil/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "Allow Scanner to access Camera";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -581,7 +591,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = Zenbil.Zenbil;
+				PRODUCT_BUNDLE_IDENTIFIER = Zenbil.Supply;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -592,15 +602,17 @@
 		F8654A562BED2F1E0024B2BB /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = QP33MFXN9M;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = Zenbil.ZenbilTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -611,15 +623,17 @@
 		F8654A572BED2F1E0024B2BB /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = QP33MFXN9M;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = Zenbil.ZenbilTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -630,9 +644,10 @@
 		F8654A592BED2F1E0024B2BB /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = QP33MFXN9M;
 				GENERATE_INFOPLIST_FILE = YES;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = Zenbil.ZenbilUITests;
@@ -647,9 +662,10 @@
 		F8654A5A2BED2F1E0024B2BB /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = QP33MFXN9M;
 				GENERATE_INFOPLIST_FILE = YES;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = Zenbil.ZenbilUITests;
