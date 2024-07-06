@@ -9,6 +9,12 @@ import Foundation
 import SwiftUI
 import VisionKit
 
+struct SessionData: Identifiable {
+    var id: UUID
+    var barcodes: [RecognizedBarcodeItem] = []
+    var texts: [RecognizedTextItem] = []
+}
+
 struct RecognizedTextItem {
     var transcript: String
     var bounds: RecognizedItem.Bounds

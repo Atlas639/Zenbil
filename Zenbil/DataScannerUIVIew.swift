@@ -10,7 +10,7 @@ import VisionKit
 
 struct DataScannerUIView: View {
     @State private var recognizedItems: [RecognizedItem] = []
-    @State private var sessions: [UUID] = []
+    @State private var sessions: [SessionData] = []
     @State private var selectedSessions: Set<UUID> = []
     @State private var activeSession: UUID? = nil
     @State private var isSelectionMode: Bool = false
@@ -38,10 +38,8 @@ struct DataScannerUIView: View {
                 TrashButton {
                     
                     withAnimation {
-                        for session in selectedSessions {
-                            if let index = sessions.firstIndex(of: session) {
-                                sessions.remove(at: index)
-                            }
+                        sessions.removeAll { session in
+                            selectedSessions.contains(session.id)
                         }
                         selectedSessions.removeAll()
                         isSelectionMode = false
@@ -50,10 +48,32 @@ struct DataScannerUIView: View {
             }
         }
     }
+    
+    private func processRecognizedItems() {
+        guard let activeSession = activeSession else { return }
+        
+        for item in recognizedItems {
+            switch item {
+            case .text(let text):
+                let textItem = RecognizedTextItem(transcript: text.transcript, bounds: text.bounds, id: UUID())
+                if let index = sessions.firstIndex (where: { $0.id == activeSession }) {
+                    sessions[index].texts.append(textItem)
+                }
+            case let .barcode(barcode):
+                let barcodeItem =  RecognizedBarcodeItem(payloadStringValue: barcode.payloadStringValue ?? "", bounds: barcode.bounds, id: UUID())
+                if let index = sessions.firstIndex(where: { $0.id == activeSession }) {
+                    sessions[index].barcodes.append(barcodeItem)
+                }
+            @unknown default:
+                print("Unknown item type")
+            }
+        }
+        recognizedItems.removeAll()
+    }
 }
 
 struct SessionScrollView: View {
-    @Binding var sessions: [UUID]
+    @Binding var sessions: [SessionData]
     @Binding var selectedSessions: Set<UUID>
     @Binding var activeSession: UUID?
     @Binding var isSelectionMode: Bool
@@ -62,32 +82,32 @@ struct SessionScrollView: View {
     var body: some View {
         ScrollView(.horizontal) {
             HStack {
-                ForEach(sessions, id: \.self) { session in
+                ForEach(sessions, id: \.id) { session in
                     SessionView(
                         session: session,
                         isSelectionMode: $isSelectionMode,
-                        isSelected: selectedSessions.contains(session),
-                        isActive: activeSession == session,
-                        isExpanded: expandedSession == session,
+                        isSelected: selectedSessions.contains(session.id),
+                        isActive: activeSession == session.id,
+                        isExpanded: expandedSession == session.id,
                         
                         onTap: {
                             if isSelectionMode {
-                                if selectedSessions.contains(session) {
-                                    selectedSessions.remove(session)
+                                if selectedSessions.contains(session.id) {
+                                    selectedSessions.remove(session.id)
                                 } else {
-                                    selectedSessions.insert(session)
+                                    selectedSessions.insert(session.id)
                                 }
                             } else {
-                                if activeSession == session {
+                                if activeSession == session.id {
                                     withAnimation {
-                                        if expandedSession == session {
+                                        if expandedSession == session.id {
                                             expandedSession = nil
                                         } else {
-                                            expandedSession = session
+                                            expandedSession = session.id
                                         }
                                     }
                                 } else {
-                                    activeSession = session
+                                    activeSession = session.id
                                     expandedSession = nil
                                 }
                             }
@@ -103,9 +123,9 @@ struct SessionScrollView: View {
                 }
                 
                 PlusButton(action: {
-                    let newSession = UUID()
+                    let newSession = SessionData(id: UUID(), barcodes: [], texts: [])
                     sessions.append(newSession)
-                    activeSession = newSession
+                    activeSession = newSession.id
                     expandedSession = nil
                 }, isSelectionMode: isSelectionMode)
             }
@@ -115,7 +135,7 @@ struct SessionScrollView: View {
 }
     
 struct SessionView: View {
-    let session: UUID
+    let session: SessionData
     @Binding var isSelectionMode: Bool
     let isSelected: Bool
     let isActive: Bool
@@ -139,11 +159,11 @@ struct SessionView: View {
             ZStack {
                 RoundedRectangle(cornerRadius: 3)
                     .stroke(isActive ? Color.blue : Color.clear, lineWidth: 3)
-            }
+                    .frame(height: 90)
                 if
                     isExpanded {
                     ExpandedSessionView()
-                        .transition(.scale)
+                        .transition(.slide)
                         .onTapGesture {
                             onTap()
                         }
@@ -158,6 +178,7 @@ struct SessionView: View {
                             onLongPress()
                         }
                 }
+            }
         }
     }
 }
@@ -168,7 +189,7 @@ struct ExpandedSessionView: View {
         ScrollView(.horizontal) {
             HStack {
                 ForEach(0..<3, id: \.self) { _ in
-                    ExpandedSessionView()
+                    ItemView()
                 }
             }
         }
@@ -220,8 +241,8 @@ struct TrashButton: View {
                         .foregroundColor(.red)
                         .padding()
                 }
-                .padding(.top, 40) // Adjust the top padding
-                .padding(.trailing, 20) // Adjust the trailing padding
+                .padding(.top, 40)
+                .padding(.trailing, 20)
             }
             Spacer()
         }

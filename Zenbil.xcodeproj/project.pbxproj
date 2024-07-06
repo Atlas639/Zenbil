@@ -16,6 +16,7 @@
 		F8654A432BED2F1E0024B2BB /* ZenbilTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8654A422BED2F1E0024B2BB /* ZenbilTests.swift */; };
 		F8654A4D2BED2F1E0024B2BB /* ZenbilUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8654A4C2BED2F1E0024B2BB /* ZenbilUITests.swift */; };
 		F8654A4F2BED2F1E0024B2BB /* ZenbilUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8654A4E2BED2F1E0024B2BB /* ZenbilUITestsLaunchTests.swift */; };
+		F8801B0A2C39A288004038A0 /* SessionDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8801B092C39A288004038A0 /* SessionDataModel.swift */; };
 		F886D4322C0EA0380006138E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F886D4312C0EA0380006138E /* GoogleService-Info.plist */; };
 		F8A1D6072C03941E00141C1D /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = F8A1D6062C03941E00141C1D /* FirebaseAnalytics */; };
 		F8A1D6092C03941E00141C1D /* FirebaseAnalyticsOnDeviceConversion in Frameworks */ = {isa = PBXBuildFile; productRef = F8A1D6082C03941E00141C1D /* FirebaseAnalyticsOnDeviceConversion */; };
@@ -80,6 +81,7 @@
 		F8654A482BED2F1E0024B2BB /* ZenbilUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ZenbilUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F8654A4C2BED2F1E0024B2BB /* ZenbilUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZenbilUITests.swift; sourceTree = "<group>"; };
 		F8654A4E2BED2F1E0024B2BB /* ZenbilUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZenbilUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		F8801B092C39A288004038A0 /* SessionDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionDataModel.swift; sourceTree = "<group>"; };
 		F886D4312C0EA0380006138E /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		F8A1D6032C0393EC00141C1D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		F8A1D6482C03EE3700141C1D /* AppViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppViewModel.swift; sourceTree = "<group>"; };
@@ -175,6 +177,7 @@
 				F815F75B2C2E2F3D005BB2E0 /* DataScannerViewModel.swift */,
 				F815F75F2C2E31F4005BB2E0 /* DataScannerModel.swift */,
 				F815F7612C2F4B9D005BB2E0 /* DataScannerUIVIew.swift */,
+				F8801B092C39A288004038A0 /* SessionDataModel.swift */,
 			);
 			path = Zenbil;
 			sourceTree = "<group>";
@@ -375,6 +378,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F8801B0A2C39A288004038A0 /* SessionDataModel.swift in Sources */,
 				F8A1D6492C03EE3700141C1D /* AppViewModel.swift in Sources */,
 				F8654A322BED2F1D0024B2BB /* ZenbilApp.swift in Sources */,
 				F815F7622C2F4B9D005BB2E0 /* DataScannerUIVIew.swift in Sources */,
