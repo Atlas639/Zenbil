@@ -8,8 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		F815F75C2C2E2F3D005BB2E0 /* DataScannerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F815F75B2C2E2F3D005BB2E0 /* DataScannerViewModel.swift */; };
-		F815F7602C2E31F4005BB2E0 /* DataScannerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F815F75F2C2E31F4005BB2E0 /* DataScannerModel.swift */; };
-		F815F7622C2F4B9D005BB2E0 /* DataScannerUIVIew.swift in Sources */ = {isa = PBXBuildFile; fileRef = F815F7612C2F4B9D005BB2E0 /* DataScannerUIVIew.swift */; };
+		F815F7622C2F4B9D005BB2E0 /* DataManagerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F815F7612C2F4B9D005BB2E0 /* DataManagerView.swift */; };
 		F8654A322BED2F1D0024B2BB /* ZenbilApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8654A312BED2F1D0024B2BB /* ZenbilApp.swift */; };
 		F8654A362BED2F1E0024B2BB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F8654A352BED2F1E0024B2BB /* Assets.xcassets */; };
 		F8654A392BED2F1E0024B2BB /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F8654A382BED2F1E0024B2BB /* Preview Assets.xcassets */; };
@@ -17,6 +16,7 @@
 		F8654A4D2BED2F1E0024B2BB /* ZenbilUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8654A4C2BED2F1E0024B2BB /* ZenbilUITests.swift */; };
 		F8654A4F2BED2F1E0024B2BB /* ZenbilUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8654A4E2BED2F1E0024B2BB /* ZenbilUITestsLaunchTests.swift */; };
 		F8801B0A2C39A288004038A0 /* SessionDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8801B092C39A288004038A0 /* SessionDataModel.swift */; };
+		F8801B122C3D4F20004038A0 /* CaptureService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8801B112C3D4F20004038A0 /* CaptureService.swift */; };
 		F886D4322C0EA0380006138E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F886D4312C0EA0380006138E /* GoogleService-Info.plist */; };
 		F8A1D6072C03941E00141C1D /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = F8A1D6062C03941E00141C1D /* FirebaseAnalytics */; };
 		F8A1D6092C03941E00141C1D /* FirebaseAnalyticsOnDeviceConversion in Frameworks */ = {isa = PBXBuildFile; productRef = F8A1D6082C03941E00141C1D /* FirebaseAnalyticsOnDeviceConversion */; };
@@ -48,7 +48,7 @@
 		F8A1D63D2C03941E00141C1D /* FirebaseVertexAI-Preview in Frameworks */ = {isa = PBXBuildFile; productRef = F8A1D63C2C03941E00141C1D /* FirebaseVertexAI-Preview */; };
 		F8A1D6492C03EE3700141C1D /* AppViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8A1D6482C03EE3700141C1D /* AppViewModel.swift */; };
 		F8A1D64D2C0675A200141C1D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8A1D64C2C0675A200141C1D /* ContentView.swift */; };
-		F8A1D64F2C06774400141C1D /* DataScannerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8A1D64E2C06774400141C1D /* DataScannerView.swift */; };
+		F8A1D64F2C06774400141C1D /* DataCaptureView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8A1D64E2C06774400141C1D /* DataCaptureView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -70,8 +70,7 @@
 
 /* Begin PBXFileReference section */
 		F815F75B2C2E2F3D005BB2E0 /* DataScannerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataScannerViewModel.swift; sourceTree = "<group>"; };
-		F815F75F2C2E31F4005BB2E0 /* DataScannerModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataScannerModel.swift; sourceTree = "<group>"; };
-		F815F7612C2F4B9D005BB2E0 /* DataScannerUIVIew.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataScannerUIVIew.swift; sourceTree = "<group>"; };
+		F815F7612C2F4B9D005BB2E0 /* DataManagerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManagerView.swift; sourceTree = "<group>"; };
 		F8654A2E2BED2F1D0024B2BB /* Zenbil.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Zenbil.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F8654A312BED2F1D0024B2BB /* ZenbilApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZenbilApp.swift; sourceTree = "<group>"; };
 		F8654A352BED2F1E0024B2BB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -82,11 +81,12 @@
 		F8654A4C2BED2F1E0024B2BB /* ZenbilUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZenbilUITests.swift; sourceTree = "<group>"; };
 		F8654A4E2BED2F1E0024B2BB /* ZenbilUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZenbilUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		F8801B092C39A288004038A0 /* SessionDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionDataModel.swift; sourceTree = "<group>"; };
+		F8801B112C3D4F20004038A0 /* CaptureService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaptureService.swift; sourceTree = "<group>"; };
 		F886D4312C0EA0380006138E /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		F8A1D6032C0393EC00141C1D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		F8A1D6482C03EE3700141C1D /* AppViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppViewModel.swift; sourceTree = "<group>"; };
 		F8A1D64C2C0675A200141C1D /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		F8A1D64E2C06774400141C1D /* DataScannerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataScannerView.swift; sourceTree = "<group>"; };
+		F8A1D64E2C06774400141C1D /* DataCaptureView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataCaptureView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -173,11 +173,11 @@
 				F8A1D6482C03EE3700141C1D /* AppViewModel.swift */,
 				F8654A352BED2F1E0024B2BB /* Assets.xcassets */,
 				F8654A372BED2F1E0024B2BB /* Preview Content */,
-				F8A1D64E2C06774400141C1D /* DataScannerView.swift */,
+				F8A1D64E2C06774400141C1D /* DataCaptureView.swift */,
 				F815F75B2C2E2F3D005BB2E0 /* DataScannerViewModel.swift */,
-				F815F75F2C2E31F4005BB2E0 /* DataScannerModel.swift */,
-				F815F7612C2F4B9D005BB2E0 /* DataScannerUIVIew.swift */,
+				F815F7612C2F4B9D005BB2E0 /* DataManagerView.swift */,
 				F8801B092C39A288004038A0 /* SessionDataModel.swift */,
+				F8801B112C3D4F20004038A0 /* CaptureService.swift */,
 			);
 			path = Zenbil;
 			sourceTree = "<group>";
@@ -381,10 +381,10 @@
 				F8801B0A2C39A288004038A0 /* SessionDataModel.swift in Sources */,
 				F8A1D6492C03EE3700141C1D /* AppViewModel.swift in Sources */,
 				F8654A322BED2F1D0024B2BB /* ZenbilApp.swift in Sources */,
-				F815F7622C2F4B9D005BB2E0 /* DataScannerUIVIew.swift in Sources */,
+				F815F7622C2F4B9D005BB2E0 /* DataManagerView.swift in Sources */,
+				F8801B122C3D4F20004038A0 /* CaptureService.swift in Sources */,
 				F8A1D64D2C0675A200141C1D /* ContentView.swift in Sources */,
-				F8A1D64F2C06774400141C1D /* DataScannerView.swift in Sources */,
-				F815F7602C2E31F4005BB2E0 /* DataScannerModel.swift in Sources */,
+				F8A1D64F2C06774400141C1D /* DataCaptureView.swift in Sources */,
 				F815F75C2C2E2F3D005BB2E0 /* DataScannerViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

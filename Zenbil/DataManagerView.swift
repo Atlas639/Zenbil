@@ -1,5 +1,5 @@
 //
-//  DataScannerUIVIew.swift
+//  DataManagerView.swift
 //  Zenbil
 //
 //  Created by Berhan Witte on 28.06.24.
@@ -8,26 +8,41 @@
 import SwiftUI
 import VisionKit
 
-struct DataScannerUIView: View {
+struct DataManagerView: View {
     @State private var recognizedItems: [RecognizedItem] = []
     @State private var sessions: [SessionData] = []
     @State private var selectedSessions: Set<UUID> = []
     @State private var activeSession: UUID? = nil
+    @State private var activeItem: UUID? = nil
     @State private var isSelectionMode: Bool = false
     @State private var expandedSession: UUID?
+    @State private var capturedImage: UIImage?
+    @State private var capturePhoto: Bool = false
     
-    @State private var viewModel = DataScannerViewModel()
     
     var body: some View {
         ZStack {
-            DataScannerView(recognizedItems: $recognizedItems,
+            DataCaptureView(recognizedItems: $recognizedItems,
                             recognizedDataTypes: [.text(textContentType: nil), .barcode()],
                             recognizesMultipleItems: true,
-                            viewModel: viewModel)
+                            sessions: $sessions,
+                            activeSession: $activeSession,
+                            activeItem: $activeItem,
+                            capturedImage: $capturedImage,
+                            capturePhoto: $capturePhoto)
             .edgesIgnoringSafeArea(.all)
             
             VStack {
                 Spacer()
+                
+                HStack {
+                    Spacer()
+                    CircleButton(action: {
+                        capturePhoto = true
+                    })
+                    .padding(.bottom, 20)
+                    Spacer()
+                }
                 
                 SessionScrollView(sessions: $sessions, selectedSessions: $selectedSessions, activeSession: $activeSession, isSelectionMode: $isSelectionMode, expandedSession: $expandedSession)
                 .background(Color.black.opacity(0.5))
@@ -48,27 +63,22 @@ struct DataScannerUIView: View {
             }
         }
     }
+}
+
+struct CircleButton: View {
+    let action: () -> Void
     
-    private func processRecognizedItems() {
-        guard let activeSession = activeSession else { return }
-        
-        for item in recognizedItems {
-            switch item {
-            case .text(let text):
-                let textItem = RecognizedTextItem(transcript: text.transcript, bounds: text.bounds, id: UUID())
-                if let index = sessions.firstIndex (where: { $0.id == activeSession }) {
-                    sessions[index].texts.append(textItem)
-                }
-            case let .barcode(barcode):
-                let barcodeItem =  RecognizedBarcodeItem(payloadStringValue: barcode.payloadStringValue ?? "", bounds: barcode.bounds, id: UUID())
-                if let index = sessions.firstIndex(where: { $0.id == activeSession }) {
-                    sessions[index].barcodes.append(barcodeItem)
-                }
-            @unknown default:
-                print("Unknown item type")
-            }
+    var body: some View {
+        Button(action: action) {
+            Circle()
+                .fill(Color.blue)
+                .frame(width: 70, height: 70)
+                .overlay(
+                    Image(systemName: "camera")
+                        .font(.largeTitle)
+                        .foregroundColor(.white)
+                )
         }
-        recognizedItems.removeAll()
     }
 }
 
@@ -250,8 +260,8 @@ struct TrashButton: View {
     }
 }
                     
-struct DataScannerUIView_Previews: PreviewProvider {
+struct DataManagerView_Previews: PreviewProvider {
     static var previews: some View {
-        DataScannerUIView()
+        DataManagerView()
     }
 }
