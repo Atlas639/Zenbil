@@ -1,5 +1,5 @@
 //
-//  AppViewModel.swift
+//  DataScannerViewModel.swift
 //  Zenbil
 //
 //  Created by Berhan Witte on 27.05.24.

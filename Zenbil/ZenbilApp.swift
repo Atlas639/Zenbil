@@ -7,6 +7,7 @@
 
 import SwiftUI
 import FirebaseCore
+import os
 
 class AppDelegate: NSObject, UIApplicationDelegate {
     func application(_ application: UIApplication,
@@ -33,3 +34,6 @@ struct YourApp: App {
         }
     }
 }
+
+
+let logger = Logger()

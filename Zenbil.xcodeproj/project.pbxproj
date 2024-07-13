@@ -3,20 +3,17 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 56;
+	objectVersion = 70;
 	objects = {
 
 /* Begin PBXBuildFile section */
-		F815F75C2C2E2F3D005BB2E0 /* DataScannerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F815F75B2C2E2F3D005BB2E0 /* DataScannerViewModel.swift */; };
-		F815F7622C2F4B9D005BB2E0 /* DataManagerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F815F7612C2F4B9D005BB2E0 /* DataManagerView.swift */; };
+		F83AA59B2C3E849300BA1549 /* PhotoCaptureView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F83AA59A2C3E849300BA1549 /* PhotoCaptureView.swift */; };
 		F8654A322BED2F1D0024B2BB /* ZenbilApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8654A312BED2F1D0024B2BB /* ZenbilApp.swift */; };
 		F8654A362BED2F1E0024B2BB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F8654A352BED2F1E0024B2BB /* Assets.xcassets */; };
 		F8654A392BED2F1E0024B2BB /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F8654A382BED2F1E0024B2BB /* Preview Assets.xcassets */; };
 		F8654A432BED2F1E0024B2BB /* ZenbilTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8654A422BED2F1E0024B2BB /* ZenbilTests.swift */; };
 		F8654A4D2BED2F1E0024B2BB /* ZenbilUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8654A4C2BED2F1E0024B2BB /* ZenbilUITests.swift */; };
 		F8654A4F2BED2F1E0024B2BB /* ZenbilUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8654A4E2BED2F1E0024B2BB /* ZenbilUITestsLaunchTests.swift */; };
-		F8801B0A2C39A288004038A0 /* SessionDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8801B092C39A288004038A0 /* SessionDataModel.swift */; };
-		F8801B122C3D4F20004038A0 /* CaptureService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8801B112C3D4F20004038A0 /* CaptureService.swift */; };
 		F886D4322C0EA0380006138E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F886D4312C0EA0380006138E /* GoogleService-Info.plist */; };
 		F8A1D6072C03941E00141C1D /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = F8A1D6062C03941E00141C1D /* FirebaseAnalytics */; };
 		F8A1D6092C03941E00141C1D /* FirebaseAnalyticsOnDeviceConversion in Frameworks */ = {isa = PBXBuildFile; productRef = F8A1D6082C03941E00141C1D /* FirebaseAnalyticsOnDeviceConversion */; };
@@ -46,9 +43,8 @@
 		F8A1D6392C03941E00141C1D /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = F8A1D6382C03941E00141C1D /* FirebaseStorage */; };
 		F8A1D63B2C03941E00141C1D /* FirebaseStorageCombine-Community in Frameworks */ = {isa = PBXBuildFile; productRef = F8A1D63A2C03941E00141C1D /* FirebaseStorageCombine-Community */; };
 		F8A1D63D2C03941E00141C1D /* FirebaseVertexAI-Preview in Frameworks */ = {isa = PBXBuildFile; productRef = F8A1D63C2C03941E00141C1D /* FirebaseVertexAI-Preview */; };
-		F8A1D6492C03EE3700141C1D /* AppViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8A1D6482C03EE3700141C1D /* AppViewModel.swift */; };
 		F8A1D64D2C0675A200141C1D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8A1D64C2C0675A200141C1D /* ContentView.swift */; };
-		F8A1D64F2C06774400141C1D /* DataCaptureView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8A1D64E2C06774400141C1D /* DataCaptureView.swift */; };
+		F8BE83272C3EDEDE000ADDD4 /* PreviewCameraModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8BE83262C3EDEDE000ADDD4 /* PreviewCameraModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,8 +65,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		F815F75B2C2E2F3D005BB2E0 /* DataScannerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataScannerViewModel.swift; sourceTree = "<group>"; };
-		F815F7612C2F4B9D005BB2E0 /* DataManagerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManagerView.swift; sourceTree = "<group>"; };
+		F83AA59A2C3E849300BA1549 /* PhotoCaptureView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCaptureView.swift; sourceTree = "<group>"; };
 		F8654A2E2BED2F1D0024B2BB /* Zenbil.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Zenbil.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F8654A312BED2F1D0024B2BB /* ZenbilApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZenbilApp.swift; sourceTree = "<group>"; };
 		F8654A352BED2F1E0024B2BB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -80,14 +75,63 @@
 		F8654A482BED2F1E0024B2BB /* ZenbilUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ZenbilUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F8654A4C2BED2F1E0024B2BB /* ZenbilUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZenbilUITests.swift; sourceTree = "<group>"; };
 		F8654A4E2BED2F1E0024B2BB /* ZenbilUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZenbilUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		F8801B092C39A288004038A0 /* SessionDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionDataModel.swift; sourceTree = "<group>"; };
-		F8801B112C3D4F20004038A0 /* CaptureService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaptureService.swift; sourceTree = "<group>"; };
 		F886D4312C0EA0380006138E /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		F8A1D6032C0393EC00141C1D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
-		F8A1D6482C03EE3700141C1D /* AppViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppViewModel.swift; sourceTree = "<group>"; };
 		F8A1D64C2C0675A200141C1D /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		F8A1D64E2C06774400141C1D /* DataCaptureView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataCaptureView.swift; sourceTree = "<group>"; };
+		F8BE83262C3EDEDE000ADDD4 /* PreviewCameraModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewCameraModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		F83AA59F2C3E92D700BA1549 /* PBXFileSystemSynchronizedBuildFileExceptionSet */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				DataScannerView.swift,
+				DataScannerViewModel.swift,
+			);
+			target = F8654A2D2BED2F1D0024B2BB /* Zenbil */;
+		};
+		F83AA5A12C3E947400BA1549 /* PBXFileSystemSynchronizedBuildFileExceptionSet */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				CircleButtonView.swift,
+				ItemScrollView.swift,
+				ItemView.swift,
+				Model/SessionDataModel.swift,
+				PlusButtonView.swift,
+				SessionManagerView.swift,
+				SessionScrollView.swift,
+				SessionView.swift,
+				TrashButtonView.swift,
+			);
+			target = F8654A2D2BED2F1D0024B2BB /* Zenbil */;
+		};
+		F83AA5B82C3E999700BA1549 /* PBXFileSystemSynchronizedBuildFileExceptionSet */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				CameraModel.swift,
+				CameraModel/Camera.swift,
+				CameraModel/DataTypes.swift,
+				CameraModel/PhotoHandler.swift,
+				CameraService.swift,
+				CameraView.swift,
+				Capture/DeviceLookup.swift,
+				Capture/PhotoCapture.swift,
+				Capture/SPCObserver.swift,
+				Support/ViewExtensions.swift,
+				Views/CameraPreview.swift,
+				Views/CaptureButton.swift,
+				Views/PreviewContainer.swift,
+				Views/StatusOverlayView.swift,
+			);
+			target = F8654A2D2BED2F1D0024B2BB /* Zenbil */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		F83AA59E2C3E92C700BA1549 /* DataScanner */ = {isa = PBXFileSystemSynchronizedRootGroup; exceptions = (F83AA59F2C3E92D700BA1549 /* PBXFileSystemSynchronizedBuildFileExceptionSet */, ); explicitFileTypes = {}; explicitFolders = (); path = DataScanner; sourceTree = "<group>"; };
+		F83AA5A02C3E946600BA1549 /* SessionManager */ = {isa = PBXFileSystemSynchronizedRootGroup; exceptions = (F83AA5A12C3E947400BA1549 /* PBXFileSystemSynchronizedBuildFileExceptionSet */, ); explicitFileTypes = {}; explicitFolders = (); path = SessionManager; sourceTree = "<group>"; };
+		F83AA5B52C3E998000BA1549 /* PhotoCapture */ = {isa = PBXFileSystemSynchronizedRootGroup; exceptions = (F83AA5B82C3E999700BA1549 /* PBXFileSystemSynchronizedBuildFileExceptionSet */, ); explicitFileTypes = {}; explicitFolders = (); path = PhotoCapture; sourceTree = "<group>"; };
+/* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		F8654A2B2BED2F1D0024B2BB /* Frameworks */ = {
@@ -166,18 +210,16 @@
 		F8654A302BED2F1D0024B2BB /* Zenbil */ = {
 			isa = PBXGroup;
 			children = (
+				F83AA5B52C3E998000BA1549 /* PhotoCapture */,
+				F83AA5A02C3E946600BA1549 /* SessionManager */,
+				F83AA59E2C3E92C700BA1549 /* DataScanner */,
 				F8A1D6032C0393EC00141C1D /* Info.plist */,
 				F886D4312C0EA0380006138E /* GoogleService-Info.plist */,
 				F8654A312BED2F1D0024B2BB /* ZenbilApp.swift */,
 				F8A1D64C2C0675A200141C1D /* ContentView.swift */,
-				F8A1D6482C03EE3700141C1D /* AppViewModel.swift */,
 				F8654A352BED2F1E0024B2BB /* Assets.xcassets */,
 				F8654A372BED2F1E0024B2BB /* Preview Content */,
-				F8A1D64E2C06774400141C1D /* DataCaptureView.swift */,
-				F815F75B2C2E2F3D005BB2E0 /* DataScannerViewModel.swift */,
-				F815F7612C2F4B9D005BB2E0 /* DataManagerView.swift */,
-				F8801B092C39A288004038A0 /* SessionDataModel.swift */,
-				F8801B112C3D4F20004038A0 /* CaptureService.swift */,
+				F83AA59A2C3E849300BA1549 /* PhotoCaptureView.swift */,
 			);
 			path = Zenbil;
 			sourceTree = "<group>";
@@ -186,6 +228,7 @@
 			isa = PBXGroup;
 			children = (
 				F8654A382BED2F1E0024B2BB /* Preview Assets.xcassets */,
+				F8BE83262C3EDEDE000ADDD4 /* PreviewCameraModel.swift */,
 			);
 			path = "Preview Content";
 			sourceTree = "<group>";
@@ -378,14 +421,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F8801B0A2C39A288004038A0 /* SessionDataModel.swift in Sources */,
-				F8A1D6492C03EE3700141C1D /* AppViewModel.swift in Sources */,
+				F8BE83272C3EDEDE000ADDD4 /* PreviewCameraModel.swift in Sources */,
 				F8654A322BED2F1D0024B2BB /* ZenbilApp.swift in Sources */,
-				F815F7622C2F4B9D005BB2E0 /* DataManagerView.swift in Sources */,
-				F8801B122C3D4F20004038A0 /* CaptureService.swift in Sources */,
 				F8A1D64D2C0675A200141C1D /* ContentView.swift in Sources */,
-				F8A1D64F2C06774400141C1D /* DataCaptureView.swift in Sources */,
-				F815F75C2C2E2F3D005BB2E0 /* DataScannerViewModel.swift in Sources */,
+				F83AA59B2C3E849300BA1549 /* PhotoCaptureView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -553,7 +592,8 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Zenbil/Info.plist;
-				INFOPLIST_KEY_NSCameraUsageDescription = "Allow Scanner to access Camera";
+				INFOPLIST_KEY_NSCameraUsageDescription = "This app required access to the camera to scan and capture items.";
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "This app requires access to the microphone to capture audio while recording videos.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -584,7 +624,8 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Zenbil/Info.plist;
-				INFOPLIST_KEY_NSCameraUsageDescription = "Allow Scanner to access Camera";
+				INFOPLIST_KEY_NSCameraUsageDescription = "This app required access to the camera to scan and capture items.";
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "This app requires access to the microphone to capture audio while recording videos.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

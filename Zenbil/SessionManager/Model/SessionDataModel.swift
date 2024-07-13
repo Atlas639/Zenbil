@@ -12,15 +12,14 @@ import VisionKit
 struct SessionData: Identifiable {
     var id: UUID
     var items: [ItemData] = []
-    var barcodes: [RecognizedBarcodeItem] = []
-    var texts: [RecognizedTextItem] = []
 }
 
 struct ItemData: Identifiable {
     var id: UUID
+    var thumbnail: CGImage?
     var barcodes: [RecognizedBarcodeItem] = []
     var texts: [RecognizedTextItem] = []
-/// var images:
+    var images: [UIImage] = []
     
 }
 

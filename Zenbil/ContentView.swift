@@ -89,7 +89,7 @@ struct ContentView: View {
             }
             .padding(20)
             .fullScreenCover(isPresented: $showScanner) {
-                DataManagerView()
+                SessionManagerView()
                 .edgesIgnoringSafeArea(.all)
             }
         }
