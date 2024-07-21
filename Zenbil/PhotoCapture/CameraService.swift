@@ -94,7 +94,7 @@ actor CaptureService {
         }
         
         // Ensure we only set depth data format if available
-        if let activeFormat = device.activeDepthDataFormat {
+        if device.activeDepthDataFormat != nil {
             do {
                 try device.lockForConfiguration()
                 device.activeDepthDataMinFrameDuration = CMTimeMake(value: 1, timescale: 30)
